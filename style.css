@@ -8,8 +8,8 @@ nav {
   position: fixed;
   width: 100%;
   top: 0;
-  background-color: #800000; 
-  color: #fff; 
+  background-color: #800000;
+  color: #fff;
   border-bottom: 1px solid #fff;
   z-index: 1000;
 }
@@ -34,7 +34,6 @@ nav a {
 nav a:hover {
   color: rgb(245, 245, 30);
   font-weight: bold;
-  
 }
 
 .container {
@@ -48,7 +47,7 @@ header {
 }
 
 .parallax {
-  background: linear-gradient(rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.3)), url('img/background.jpg'); /* Replace with your image path */
+  background: linear-gradient(rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.3)), url('img/background.jpg');
   background-attachment: fixed;
   background-position: center;
   background-repeat: no-repeat;
@@ -68,7 +67,7 @@ header {
   height: 100%;
   background: inherit;
   z-index: -1;
-  transform: translateZ(-1px) scale(1.5); /* Adjust the scale value for the parallax effect */
+  transform: translateZ(-1px) scale(1.5);
 }
 
 .profile-container {
@@ -78,18 +77,18 @@ header {
 .profile-img {
   width: 200px;
   height: 200px;
-  background-image: url('img/profile.jpg'); /* Replace with your image path */
+  background-image: url('img/profile.jpg');
   background-size: cover;
   background-position: center;
-  border-radius: 50%; /* Make it circular */
+  border-radius: 50%;
   margin: 20px auto 10px;
-  border: 4px solid #fff; /* White border for contrast */
-  background-color: #800000; /* Maroon color, replace with your desired maroon shade */
-  transition: transform 0.5s ease-out; /* Add a transition for a smoother effect */
+  border: 4px solid #fff;
+  background-color: #800000;
+  transition: transform 0.5s ease-out;
 }
 
 .profile-container:hover .profile-img {
-  transform: scale(1.2); /* Zoom in on hover */
+  transform: scale(1.2);
 }
 
 .header-content {
@@ -100,13 +99,13 @@ header {
 
 header h1 {
   margin: 0;
-  font-size: 2em; /* Increase font size */
-  color: #fff 
+  font-size: 2em;
+  color: #fff;
 }
 
 header p {
   margin: 5px 0;
-  color: #fff; /* White */
+  color: #fff;
 }
 
 section {
@@ -114,11 +113,21 @@ section {
 }
 
 h2 {
-  color: #800000; /* Maroon */
+  color: #800000;
+}
+
+.projects-row {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
 }
 
 .project {
-  margin-bottom: 40px;
+  width: calc(33.333% - 20px);
+  margin-bottom: 20px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
   border: 1px solid #eaeaea;
   border-radius: 8px;
   overflow: hidden;
@@ -132,12 +141,26 @@ h2 {
 
 .project img {
   width: 100%;
-  height: 200px; /* Adjust the height as needed */
-  object-fit: cover;
+  height: 100%;
+  object-fit: contain;
 }
 
 .project-info {
+  flex-grow: 1;
   padding: 20px;
+}
+
+.project-info a {
+  background-color: #800000;
+  color: #fff;
+  text-decoration: none;
+  padding: 8px;
+  border-radius: 4px;
+  transition: background-color 0.3s ease;
+}
+
+.project-info a:hover {
+  background-color: #4d0000;
 }
 
 form {
@@ -147,30 +170,29 @@ form {
 }
 
 label {
-  color: #800000; /* Maroon */
+  color: #800000;
 }
 
 button {
   padding: 10px;
-  background-color: #800000; /* Maroon */
-  color: #fff; /* White */
+  background-color: #800000;
+  color: #fff;
   border: none;
   cursor: pointer;
   transition: background-color 0.3s ease;
 }
 
 button:hover {
-  background-color: #4d0000; /* Darker Maroon on hover */
+  background-color: #4d0000;
 }
 
 footer {
-  background-color: #800000; /* Maroon */
-  color: #fff; /* White */
+  background-color: #800000;
+  color: #fff;
   text-align: center;
   padding: 20px 0;
 }
 
-/* Media Query for Responsive Navigation */
 @media screen and (max-width: 768px) {
   nav ul {
     flex-direction: column;
@@ -181,4 +203,47 @@ footer {
   nav a {
     margin: 5px 0;
   }
+}
+
+#about {
+  padding: 60px 0;
+}
+
+#projects {
+  padding: 80px 0;
+}
+
+.about-content {
+  display: flex;
+  justify-content: space-between;
+}
+
+.about-text {
+  flex: 1;
+  margin-right: 20px;
+}
+
+.skills {
+  margin-top: 40px;
+}
+
+.skill-bar {
+  display: flex;
+  flex-direction: column;
+}
+
+.skill {
+  margin-bottom: 12px;
+}
+
+.skill-name {
+  font-weight: bold;
+  margin-bottom: 4px;
+}
+
+.skill-level {
+  height: 12px;
+  background-color: #800000;
+  width: 0;
+  transition: width 1s ease;
 }
