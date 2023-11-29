@@ -1,5 +1,5 @@
 body {
-  font-family: 'Arial', sans-serif;
+  font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
   margin: 0;
   padding: 0;
 }
@@ -89,6 +89,33 @@ header {
 
 .profile-container:hover .profile-img {
   transform: scale(1.2);
+}
+
+.profile-img-big {
+  width: 400px;
+  height: 580px;
+  background-image: url('img/profile.jpg');
+  background-size: cover;
+  background-position: center;
+  border-radius: 8px; /* Menambahkan border-radius agar persegi lebih halus */
+  margin: 20px auto 10px;
+  border: none; /* Menghapus border */
+}
+
+.social-icons {
+  margin-left: 20px;
+  margin-top: 20px;
+}
+
+.social-icons a {
+  display: block; /* Mengubah menjadi blok untuk memindahkan ke bawah satu per satu */
+  margin-bottom: 10px; /* Memberikan margin bawah untuk mengatur jarak antara ikon sosial media */
+}
+
+.social-icons img {
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
 }
 
 .header-content {
