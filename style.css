@@ -97,9 +97,9 @@ header {
   background-image: url('img/profile.jpg');
   background-size: cover;
   background-position: center;
-  border-radius: 8px; /* Menambahkan border-radius agar persegi lebih halus */
+  border-radius: 8px;
   margin: 20px auto 10px;
-  border: none; /* Menghapus border */
+  border: none; 
 }
 
 .social-icons {
@@ -108,8 +108,8 @@ header {
 }
 
 .social-icons a {
-  display: block; /* Mengubah menjadi blok untuk memindahkan ke bawah satu per satu */
-  margin-bottom: 10px; /* Memberikan margin bawah untuk mengatur jarak antara ikon sosial media */
+  display: block; 
+  margin-bottom: 10px;
 }
 
 .social-icons img {
